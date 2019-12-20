@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/screens/tabs/feeds.dart';
 
-class AbandonoTratamientoPage extends StatelessWidget {
+class NoInicioTratamientoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
 
     final pageTitle = Padding(
       padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
       child: Text(
-        "Abandone un tratamiento ",
+        "No estoy siguiendo un tratamiento ",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.black,
@@ -37,8 +37,8 @@ class AbandonoTratamientoPage extends StatelessWidget {
                       child: Center(
                         child: Column(
                           children: <Widget>[
-                            Image.asset('assets/images/abandono.jpg'),
-                            Text("Deberias reanudar tu tratamiento")
+                            Image.asset('assets/images/VIH.jpg'),
+                            Text("Deberias iniciar un tratamiento o contactate con uno de nuestro brigadieres")
                           ],
                         ),
                       ),
@@ -55,7 +55,7 @@ class AbandonoTratamientoPage extends StatelessWidget {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text('No olvides que el seguir con tu tratamiento previene el deterioro de tu salud'),  
+                    Text('La opcion de entrar a un tratamiento es sumamente beneficiosa para el cuidado de  salud'),  
                     FlatButton(
                       color: Colors.orange,
                       onPressed: () {
