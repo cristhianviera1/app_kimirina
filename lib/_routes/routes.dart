@@ -23,6 +23,6 @@ const String noInicioTratamientoViewRoute = 'no_inicio_Tratamiento';
 const String serviciosKimirina = "servicios_kimirina";
 
 const String preguntaTieneITS = "tiene_its";
-const String postAutoTest = "post_auto_test";
 
-const String pinCode = 'pin_code';
+const String pruebaComunitariaViewRoute = "prueba_comunitaria";
+const String postAutoTest = "post_auto_test";
