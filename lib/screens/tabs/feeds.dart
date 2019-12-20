@@ -68,7 +68,12 @@ class FeedsPage extends StatelessWidget {
                       child: Text(
                         "Riesgo",
                       ),
-                    )
+                    ), FlatButton(
+                      onPressed: () => Navigator.pushNamed(context, autotestViewRoute),
+                      child: Text(
+                        "autotest",
+                      ),
+                    ),
                   ],
                 ),
               )

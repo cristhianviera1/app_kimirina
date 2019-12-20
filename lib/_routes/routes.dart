@@ -9,5 +9,6 @@ const String chatDetailsViewRoute = 'chat_details';
 const String userDetailsViewRoute = 'user_details';
 
 const String riesgoViewRoute = 'riesgo';
+const String autotestViewRoute = 'autotest';
 
 const String selectOptionItsRoute = 'select_option_its';
