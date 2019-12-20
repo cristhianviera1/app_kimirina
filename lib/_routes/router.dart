@@ -33,7 +33,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => RiesgoPage());
     case autotestViewRoute:
       return MaterialPageRoute(builder: (context) => AutotestPage());
-      case autotestViewRoute:
+      case pruebaComunitariaViewRoute:
       return MaterialPageRoute(builder: (context) => PruebaComunitariaPage());
     case postAutoTest:
       return MaterialPageRoute(builder: (context) => PostAutoTestPage());

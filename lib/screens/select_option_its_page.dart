@@ -30,7 +30,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 onPressed: (){
-                  Navigator.of(context).pushNamed(preguntaTieneITS);
+                  Navigator.of(context).pushNamed(itsActualActionViewRoute);
                 },
               )
             ],
@@ -60,6 +60,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
                 onPressed: () {
                   Navigator.of(context).pushNamed(riskFormRoute);
                 },
+                
                 child: Text(
                   'Saber más',
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -93,7 +94,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text('Información'),
+        title: Text(''),
       ),
       body: ListView(
         padding: EdgeInsets.all(10.0),
