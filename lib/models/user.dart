@@ -24,6 +24,7 @@ final List<User> users = [
   User(8, 'Louis Diaz', AvailableImages.man4['assetPath'], 'M', 23),
   User(9, 'Kyle Poole', AvailableImages.man5['assetPath'], 'M', 25),
   User(10, 'Brenda Watkins', AvailableImages.woman5['assetPath'], 'F', 26),
+  User(11, 'Tienes VIH o alguna infecion sexual', AvailableImages.logoIts['assetPath'], 'F', 26),
 ];
 
 final List<String> userHobbies = [

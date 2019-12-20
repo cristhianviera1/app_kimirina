@@ -3,6 +3,7 @@ import 'package:kimirina_app/models/feed.dart';
 import 'package:kimirina_app/widgets/feed_card1.dart';
 import 'package:kimirina_app/widgets/feed_card2.dart';
 import 'package:kimirina_app/widgets/feed_card3.dart';
+import 'package:kimirina_app/screens/select_option_its_page.dart';
 
 
 class FeedsPage extends StatelessWidget {
@@ -49,6 +50,18 @@ class FeedsPage extends StatelessWidget {
                     FeedCard3(
                       feed: feeds[2],
                     ),
+                    FlatButton(
+                      onPressed: () {
+                        /*...*/
+                        Navigator.of(context)
+                        .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                        return new SelectOptionItsPage();
+                      }));
+                      },
+                      child: Text(
+                        "Flat Button",
+                      ),
+                    )
                   ],
                 ),
               )
