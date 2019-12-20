@@ -10,6 +10,8 @@ import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
 import 'package:kimirina_app/screens/its_actual_action.dart';
+import 'package:kimirina_app/screens/sigue_tratamiento.dart';
+import 'package:kimirina_app/screens/abandono_tratamineto.dart';
 
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -30,6 +32,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => SelectOptionItsPage());
     case itsActualActionViewRoute:
       return MaterialPageRoute(builder: (context) => ItsActualActionPage());
+    case siguiendoTratamientoViewRoute:
+    return MaterialPageRoute(builder: (context) => SigueTratamientoPage());
+    case abandonoTratamientoViewRoute:
+    return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
     case chatDetailsViewRoute:
       return MaterialPageRoute(builder: (context) => ChatDetailsPage(userId: settings.arguments));
     case userDetailsViewRoute:

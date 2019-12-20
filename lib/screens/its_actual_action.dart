@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/screens/abandono_tratamineto.dart';
+import 'package:kimirina_app/screens/sigue_tratamiento.dart';
 
 class ItsActualActionPage extends StatelessWidget {
   @override
@@ -132,7 +134,10 @@ class ItsActualActionPage extends StatelessWidget {
         RaisedButton(
         color: Colors.orange,
         onPressed: (){ 
-
+          Navigator.of(context)
+          .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+          return new SigueTratamientoPage();
+        }));
         },
         child: Text("Que tal te va??"), 
         )
@@ -151,7 +156,7 @@ class ItsActualActionPage extends StatelessWidget {
         onPressed: (){ 
           Navigator.of(context)
           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-          return new ItsActualActionPage();
+          return new AbandonoTratamientoPage();
         }));
         },
         child: Text("Cuentanos la razon??"), 
