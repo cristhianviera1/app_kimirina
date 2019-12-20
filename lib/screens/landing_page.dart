@@ -1,111 +1,54 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:kimirina_app/_routes/routes.dart';
-import 'package:kimirina_app/utils/colors.dart';
-import 'package:kimirina_app/utils/utils.dart';
+import 'dart:async';
 
-class LandingPage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/models/slide.dart';
+import 'package:kimirina_app/widgets/slide_dots.dart';
+import 'package:kimirina_app/widgets/slide_item.dart';
+class LandingPage extends StatefulWidget {
+  @override
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
+  int _currentPage = 0;
+  final PageController _pageController = PageController(initialPage: 0);
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(Duration(seconds: 5), (Timer timer) {
+      if (_currentPage < 2) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+
+      _pageController.animateToPage(
+        _currentPage,
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
+  }
+
+  _onPageChanged(int index) {
+    setState(() {
+      _currentPage = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    // Change Status Bar Color
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: primaryColor),
-    );
-
-    final logo = Container(
-      height: 100.0,
-      width: 100.0,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AvailableImages.appLogo,
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-
-    final appName = Column(
-      children: <Widget>[
-        Text(
-          AppConfig.appName,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontSize: 30.0,
-          ),
-        ),
-        Text(
-          AppConfig.appTagline,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18.0,
-            fontWeight: FontWeight.w500
-          ),
-        )
-      ],
-    );
-
-    final loginBtn = InkWell(
-      onTap: () => Navigator.pushNamed(context, loginViewRoute),
-      child: Container(
-        height: 60.0,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(7.0),
-          border: Border.all(color: Colors.white),
-          color: Colors.transparent,
-        ),
-        child: Center(
-          child: Text(
-            'Iniciar Sesión',
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 20.0,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
-    );
-
-    final registerBtn = Container(
-      height: 60.0,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7.0),
-        border: Border.all(color: Colors.white),
-        color: Colors.white,
-      ),
-      child: RaisedButton(
-        elevation: 5.0,
-        onPressed: () => Navigator.pushNamed(context, registerViewRoute),
-        color: Colors.white,
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(7.0),
-        ),
-        child: Text(
-          'Registrarse',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 20.0,
-          ),
-        ),
-      ),
-    );
-
-    final buttons = Padding(
-      padding: EdgeInsets.only(
-        top: 80.0,
-        bottom: 30.0,
-        left: 30.0,
-        right: 30.0,
-      ),
-      child: Column(
-        children: <Widget>[loginBtn, SizedBox(height: 20.0), registerBtn],
-      ),
-    );
-
     return Scaffold(
       body: Container(
+<<<<<<< HEAD
         child: Stack(
           children: <Widget>[
             Container(
@@ -124,16 +67,93 @@ class LandingPage extends StatelessWidget {
                 child: Container(
                   height: 300.0,
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AvailableImages.homePage,
-                      fit: BoxFit.contain,
+=======
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  children: <Widget>[
+                    PageView.builder(
+                      scrollDirection: Axis.horizontal,
+                      controller: _pageController,
+                      onPageChanged: _onPageChanged,
+                      itemCount: slideList.length,
+                      itemBuilder: (ctx, i) => SlideItem(i),
                     ),
-                  ),
+                    Stack(
+                      alignment: AlignmentDirectional.topStart,
+                      children: <Widget>[
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 35),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              for(int i = 0; i<slideList.length; i++)
+                                if( i == _currentPage )
+                                  SlideDots(true)
+                                else
+                                  SlideDots(false)
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+>>>>>>> cdcfb5938f2b3f22dbced8b1d989d5bf24875f7d
                 ),
               ),
-            )
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  FlatButton(
+                    child: Text(
+                      'Getting Started',
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    padding: const EdgeInsets.all(15),
+                    color: Theme.of(context).primaryColor,
+                    textColor: Colors.white,
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(registerViewRoute);
+                    },
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Have an account?',
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
+                      ),
+                      FlatButton(
+                        child: Text(
+                          'Login',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(homeViewRoute);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
