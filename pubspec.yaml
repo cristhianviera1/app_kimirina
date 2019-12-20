@@ -62,6 +62,8 @@ flutter:
    - assets/images/its1.jpg
    - assets/animations/Lock_Animation.flr
    - assets/images/atencion-primaria.jpg
+   - assets/animations/Logo.flr
+   - assets/animations/handShake.flr
 
    
 
