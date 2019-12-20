@@ -6,7 +6,8 @@ import 'app.dart';
 
 void main(){
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: primaryDark
+    statusBarColor: primaryDark,
+    systemNavigationBarColor: primaryDark
   ));
   runApp(App());
 }
