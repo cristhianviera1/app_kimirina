@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
 import 'package:kimirina_app/screens/chat_page.dart';
 import 'package:kimirina_app/screens/home_page.dart';
+import 'package:kimirina_app/screens/kimirinaServices_page.dart';
 import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
@@ -39,13 +40,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case itsActualActionViewRoute:
       return MaterialPageRoute(builder: (context) => ItsActualActionPage());
     case siguiendoTratamientoViewRoute:
-    return MaterialPageRoute(builder: (context) => SigueTratamientoPage());
+      return MaterialPageRoute(builder: (context) => SigueTratamientoPage());
+    case serviciosKimirina:
+      return MaterialPageRoute(builder: (context) => KimirinaServicesPage());
     case preguntaTieneITS:
       return MaterialPageRoute(builder: (context) => SelectOptionItsPage());
     case abandonoTratamientoViewRoute:
-    return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
+      return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
     case noInicioTratamientoViewRoute:
-    return MaterialPageRoute(builder: (context) => NoInicioTratamientoPage());
+      return MaterialPageRoute(builder: (context) => NoInicioTratamientoPage());
     case chatDetailsViewRoute:
       return MaterialPageRoute(
           builder: (context) => ChatDetailsPage(userId: settings.arguments));

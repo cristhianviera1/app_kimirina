@@ -17,5 +17,7 @@ const String siguiendoTratamientoViewRoute = 'sigue_tratamiento';
 const String abandonoTratamientoViewRoute = 'abandona_tratamiento';
 const String noInicioTratamientoViewRoute = 'no_inicio_Tratamiento';
 
+const String serviciosKimirina = "servicios_kimirina";
+
 const String preguntaTieneITS = "tiene_its";
 

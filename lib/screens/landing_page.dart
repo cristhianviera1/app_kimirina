@@ -105,7 +105,7 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                       ),
                         onPressed: () {
-                          Navigator.of(context).pushNamed(homeViewRoute);
+                          Navigator.of(context).pushNamed(serviciosKimirina);
                         },
                       ),
                     ],

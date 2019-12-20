@@ -75,10 +75,13 @@ flutter:
    - assets/images/tratamiento.jpg
    - assets/images/abandono.jpg
    - assets/images/VIH.jpg
-   - assets/videos/logo.mp4
    - assets/animations/logo.gif
-
-
+   - assets/images/temperature.png
+   - assets/images/uso.jpg
+   - assets/images/resultado.png
+   - assets/images/prep.jpg
+   - assets/images/pruebaComunitaria.jpg
+   - assets/images/movilidadHumana.jpg
 
    
 
