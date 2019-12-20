@@ -17,7 +17,8 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
         children: <Widget>[
           ListTile(
             leading: Icon(Icons.info, color: secondaryColor),
-            title: Text('Actualmente tienes una ITS?', style: styleTextTitleCards),
+            title:
+                Text('Actualmente tienes una ITS?', style: styleTextTitleCards),
             subtitle: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
           ),
@@ -29,7 +30,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
                   'Saber más',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                onPressed: (){
+                onPressed: () {
                   Navigator.of(context).pushNamed(itsActualActionViewRoute);
                 },
               )
@@ -78,7 +79,10 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
           Image.asset('assets/animations/logo.gif'),
           Container(
               padding: EdgeInsets.all(10.0),
-              child: Text('Oportunidad de vida',style: TextStyle(color: primaryColor),))
+              child: Text(
+                'Oportunidad de vida',
+                style: TextStyle(color: primaryColor),
+              ))
         ],
       ),
       decoration: BoxDecoration(
@@ -94,7 +98,21 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: Text('Información'),
+        actions: <Widget>[
+          FlatButton(
+            child: Text(
+              'Omitir',
+              style: TextStyle(
+                fontSize: 13,
+                color: Colors.white
+              ),
+            ),
+            onPressed: () {
+              Navigator.of(context).pushNamed(homeViewRoute);
+            },
+          ),
+        ],
       ),
       body: ListView(
         padding: EdgeInsets.all(10.0),

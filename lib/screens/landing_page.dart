@@ -5,6 +5,7 @@ import 'package:kimirina_app/utils/colors.dart';
 import 'package:kimirina_app/widgets/slide_dots.dart';
 import 'package:kimirina_app/widgets/slide_item.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
+
 class LandingPage extends StatefulWidget {
   @override
   _LandingPageState createState() => _LandingPageState();
@@ -34,8 +35,6 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
       body: Container(
         color: Colors.white,
         child: Padding(
@@ -62,8 +61,8 @@ class _LandingPageState extends State<LandingPage> {
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              for(int i = 0; i<slideList.length; i++)
-                                if( i == _currentPage )
+                              for (int i = 0; i < slideList.length; i++)
+                                if (i == _currentPage)
                                   SlideDots(true)
                                 else
                                   SlideDots(false)
@@ -103,11 +102,11 @@ class _LandingPageState extends State<LandingPage> {
                     children: <Widget>[
                       FlatButton(
                         child: Text(
-                        '¿Deseas conocer nuestros servicios?',
+                          '¿Deseas conocer nuestros servicios?',
                           style: TextStyle(
-                          fontSize: 18,
+                            fontSize: 18,
+                          ),
                         ),
-                      ),
                         onPressed: () {
                           Navigator.of(context).pushNamed(serviciosKimirina);
                         },

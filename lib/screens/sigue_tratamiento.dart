@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/screens/tabs/feeds.dart';
+import 'package:kimirina_app/utils/colors.dart';
 
 class SigueTratamientoPage extends StatelessWidget {
   @override
@@ -19,6 +20,7 @@ class SigueTratamientoPage extends StatelessWidget {
 
 
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.grey.withOpacity(0.1),
@@ -55,9 +57,9 @@ class SigueTratamientoPage extends StatelessWidget {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text('No abandones tu tratamineto pues este es muy importante para ti'),  
+                    Text('No abandones tu tratamineto pues este es muy importante para ti',),  
                     FlatButton(
-                      color: Colors.orange,
+                      color: primaryColor,
                       onPressed: () {
                         /*...*/
                         Navigator.of(context)
@@ -66,20 +68,18 @@ class SigueTratamientoPage extends StatelessWidget {
                       }));
                       },
                       child: Text(
-                        "Finalizar",
+                        "Finalizar",style: TextStyle(color: Colors.white)
                       ),
                     ),
                     FlatButton(
-                      color: Colors.yellow,
                       onPressed: () {
                         /*...*/
-                        Navigator.of(context)
-                        .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                        Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
                         return new FeedsPage();
                       }));
                       },
                       child: Text(
-                        "Deseas hablar con un brigadista?",
+                        "Contactanos",
                       ),
                     )
                   ],
