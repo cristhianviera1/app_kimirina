@@ -81,7 +81,7 @@ class _LandingPageState extends State<LandingPage> {
                 children: <Widget>[
                   FlatButton(
                     child: Text(
-                      'Getting Started',
+                      'Empezar',
                       style: TextStyle(
                         fontSize: 18,
                       ),
@@ -99,17 +99,13 @@ class _LandingPageState extends State<LandingPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        'Have an account?',
-                        style: TextStyle(
+                      FlatButton(
+                        child: Text(
+                        '¿Deseas conocer nuestros servicios?',
+                          style: TextStyle(
                           fontSize: 18,
                         ),
                       ),
-                      FlatButton(
-                        child: Text(
-                          'Login',
-                          style: TextStyle(fontSize: 18),
-                        ),
                         onPressed: () {
                           Navigator.of(context).pushNamed(homeViewRoute);
                         },
