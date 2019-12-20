@@ -21,7 +21,7 @@ class RiesgoPage extends StatelessWidget {
     return new Scaffold(
       //hit Ctrl+space in intellij to know what are the options you can use in flutter widgets
       body: new Container(
-        padding: new EdgeInsets.all(32.0),
+        padding: new EdgeInsets.all(30.0),
         child: new Center(
           child: new Column(
             children: <Widget>[
@@ -53,27 +53,31 @@ class RiesgoPage extends StatelessWidget {
       ),
               ),
               new Card(
-                child: new Container(
-                  padding: new EdgeInsets.all(32.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Text('Hello World'),
-                      new Text('How are you?')
-                    ],
-                  ),
-                ),
+                 child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const ListTile(
+            leading: CircleAvatar(
+    backgroundImage: AssetImage('assets/images/woman1.jpg'),
+  ),
+            title: Text('The Enchanted Nightingale'),
+            subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+          ),
+          ButtonBar(
+            children: <Widget>[
+              FlatButton(
+                child: const Text('BUY TICKETS'),
+                onPressed: () { /* ... */ },
               ),
-              new Card(
-                child: new Container(
-                  padding: new EdgeInsets.all(32.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Text('Hello World'),
-                      new Text('How are you?')
-                    ],
-                  ),
-                ),
-              )
+              FlatButton(
+                child: const Text('LISTEN'),
+                onPressed: () { /* ... */ },
+              ),
+            ],
+          ),
+        ],
+      ),
+              ),
             ],
           ),
         ),
