@@ -11,5 +11,6 @@ const String selectOptionItsRoute = 'select_option_its';
 const String itsActualActionViewRoute = 'its_actual_action';
 const String siguiendoTratamientoViewRoute = 'sigue_tratamiento';
 const String abandonoTratamientoViewRoute = 'abandona_tratamiento';
+const String noInicioTratamientoViewRoute = 'no_inicio_Tratamiento';
 
 const String riesgoViewRoute = 'riesgo';
