@@ -1,221 +1,111 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/utils/colors.dart';
 
-import 'its_actual_action.dart';
-
-class SelectOptionItsPage extends StatelessWidget {
+class SelectOptionItsPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context){
+  _SelectOptionItsPageState createState() => _SelectOptionItsPageState();
+}
 
-
-    final userImage = Positioned(
-      left: 0,
-      top: 15.0,
-      child: InkWell(
-        onTap: () => Navigator.pushNamed(null, homeViewRoute),
-        child: Hero(
-          tag: AssetImage('assets/images/its1.jpg'),
-          child: Material(
-            elevation: 5.0,
-            borderRadius: BorderRadius.circular(14.0),
-            child: Container(
-              height: 120.0,
-              width: 120.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14.0),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/its1.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
+  @override
+  Widget build(BuildContext context) {
+    final _cardTipo1 = Card(
+      elevation: 10.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.info, color: secondaryColor),
+            title: Text('Actualmente tienes una ITS?', style: styleTextQuestions),
+            subtitle: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
           ),
-        ),
-      ),
-    );
-
-    final userName = Text(
-      'Has contraido VIH o alguna infexion sexual',
-      style: TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-        fontSize: 16.0,
-      ),
-    );
-
-    final cardContent = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        userName,
-        SizedBox(
-          height: 5.0,
-        ),
-        RaisedButton(
-        color: Colors.orange,
-        onPressed: (){ 
-          Navigator.of(context)
-          .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-          return new ItsActualActionPage();
-        }));
-        },
-        child: Text("Si lo tengo"), 
-        )
-      ],
-    );
-
-
-    final pageTitle = Padding(
-      padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
-      child: Text(
-        "Selecciona una opción: ",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-          fontSize: 35.0,
-        ),
-      ),
-    );
-
-
-    final userImage2 = Positioned(
-      right: 0,
-      top: 15.0,
-      child: InkWell(
-        onTap: () => Navigator.pushNamed(null, homeViewRoute),
-        child: Hero(
-          tag: AssetImage('assets/images/atencion-primaria.jpg'),
-          child: Material(
-            elevation: 5.0,
-            borderRadius: BorderRadius.circular(14.0),
-            child: Container(
-              height: 120.0,
-              width: 120.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14.0),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/atencion-primaria.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-
-    final userName2 = Text(
-      'No deseo saber si padesco??',
-      style: TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-        fontSize: 16.0,
-      ),
-    );
-
-    final cardContent2 = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        userName2,
-        SizedBox(
-          height: 5.0,
-        ),
-        RaisedButton(
-        color: Colors.orange,
-        onPressed: 
-          () => Navigator.of(context).pushNamed(riskFormRoute)          
-        ,
-        child: Text("Realizar test"), 
-        )
-      ],
-    );
-    
-
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          color: Colors.grey.withOpacity(0.1),
-          padding: EdgeInsets.only(top: 40.0),
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(top: 30.0, left: 30.0, right: 30.0, bottom: 30.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    pageTitle,
-                    //-------------------------------------------------
-                     Container(
-                       height: 150.0,
-                          width: MediaQuery.of(context).size.width,
-                          child: Stack(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
-                                child: Material(
-                                  elevation: 5.0,
-                                  borderRadius: BorderRadius.circular(14.0),
-                                  child: Container(
-                                    padding: EdgeInsets.only(top: 20.0, left: 100.0),
-                                    height: 150.0,
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: cardContent,
-                                  ),
-                                ),
-                              ),
-                              userImage
-                            ],
-                          ),
-                    ),
-                    //-------------------------------------------------------------------
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    //-------------------------------------------------------------------
-                    Container(
-                      height: 150.0,
-                      width: MediaQuery.of(context).size.width,
-                      child: Stack(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(right: 40.0),
-                            child: Material(
-                              elevation: 5.0,
-                              borderRadius: BorderRadius.circular(14.0),
-                              child: Container(
-                                padding: EdgeInsets.only(top: 20.0, right: 100.0, left: 20.0),
-                                height: 150.0,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(14.0),
-                                ),
-                                child: cardContent2,
-                              ),
-                            ),
-                          ),
-                          userImage2
-                        ],
-                      ),
-                    ),
-                    //......................................................................
-                    SizedBox(
-                      height: 60.0,
-                    ),
-                    //-----------------------------------------------------------------------
-                  ],
+              FlatButton(
+                child: Text(
+                  'Saber más',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                onPressed: (){
+                  Navigator.of(context).pushNamed(preguntaTieneITS);
+                },
+              )
+            ],
+          )
+        ],
+      ),
+    );
+
+    final _cardTipo2 = Card(
+      elevation: 10.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.info, color: secondaryColor),
+            title: Text(
+              '¿Deseas saber si posees una ITS?',
+              style: styleTextQuestions,
+            ),
+            subtitle: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              MaterialButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(riskFormRoute);
+                },
+                child: Text(
+                  'Saber más',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               )
             ],
-          ),
-        ),
+          )
+        ],
       ),
     );
 
+    final _cardTipo3 = Container(
+      child: Column(
+        children: <Widget>[
+          Image.asset('assets/animations/logo.gif'),
+          Container(
+              padding: EdgeInsets.all(10.0),
+              child: Text('Oportunidad de vida',style: TextStyle(color: primaryColor),))
+        ],
+      ),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30.0),
+          color: Colors.white,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10.0,
+                spreadRadius: 2.0,
+                offset: Offset(2.0, 10.0))
+          ]),
+    );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Información'),
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(10.0),
+        children: <Widget>[
+          _cardTipo3,
+          SizedBox(height: 30.0),
+          _cardTipo2,
+          SizedBox(height: 30.0),
+          _cardTipo1,
+          SizedBox(height: 30.0),
+        ],
+      ),
+    );
   }
 }

@@ -28,6 +28,7 @@ dependencies:
   flare_flutter:
   grouped_buttons:
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,8 +72,8 @@ flutter:
    - assets/images/tratamiento.jpg
    - assets/images/abandono.jpg
    - assets/images/VIH.jpg
-
-   
+   - assets/videos/logo.mp4
+   - assets/animations/logo.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
