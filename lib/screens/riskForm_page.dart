@@ -63,7 +63,7 @@ class _RiskFormPageState extends State<RiskFormPage> {
                 borderSide: BorderSide(color: Colors.black38),
               ),
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.orange),
+                borderSide: BorderSide(color: primaryColor),
               ),
             ),
             keyboardType: TextInputType.number,

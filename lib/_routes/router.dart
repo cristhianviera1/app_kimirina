@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/screens/autotest_page.dart';
 import 'package:kimirina_app/screens/chat_page.dart';
 import 'package:kimirina_app/screens/home_page.dart';
 import 'package:kimirina_app/screens/kimirinaServices_page.dart';
 import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
+import 'package:kimirina_app/screens/postAutotest_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
 import 'package:kimirina_app/screens/riskForm_page.dart';
 import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
-import 'package:kimirina_app/screens/tabs/autotest_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
 import 'package:kimirina_app/screens/its_actual_action.dart';
@@ -31,6 +32,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => RiesgoPage());
     case autotestViewRoute:
       return MaterialPageRoute(builder: (context) => AutotestPage());
+    case postAutoTest:
+      return MaterialPageRoute(builder: (context) => PostAutoTestPage());
     case resetPasswordViewRoute:
       return MaterialPageRoute(builder: (context) => ResetPasswordPage());
     case selectOptionItsRoute:

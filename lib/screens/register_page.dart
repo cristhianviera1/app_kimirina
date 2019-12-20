@@ -207,7 +207,7 @@ class _RegisterPageState extends State<RegisterPage> {
           borderSide: BorderSide(color: Colors.black38),
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.orange),
+          borderSide: BorderSide(color: primaryColor),
         ),
       ),
       keyboardType: type,
@@ -218,7 +218,7 @@ class _RegisterPageState extends State<RegisterPage> {
   onChangeDropdownItem(City selectedCity) {
     setState(() {
       _selectedCity = selectedCity;
-      _comboBoxColor = Colors.orange;
+      _comboBoxColor = primaryColor;
     });
   }
 }

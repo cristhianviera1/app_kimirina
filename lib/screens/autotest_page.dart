@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../_routes/routes.dart';
+import 'package:kimirina_app/_routes/routes.dart';
 import 'package:kimirina_app/utils/colors.dart';
-
 
 class AutotestPage extends StatelessWidget {
   @override
@@ -11,10 +10,13 @@ class AutotestPage extends StatelessWidget {
         // clipBehavior: Clip.antiAlias,
         child: Column(
           children: <Widget>[
-             ListTile(
-            title: Text('¿Donde nos puedes encontrar?',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold, color: Colors.black)),
-            
-          ),
+            ListTile(
+              title: Text('¿Donde nos puedes encontrar?',
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black)),
+            ),
             FadeInImage(
               image: AssetImage('assets/images/mapa.jpg'),
               placeholder: AssetImage('assets/animations/logo.gif'),
@@ -24,7 +26,8 @@ class AutotestPage extends StatelessWidget {
             ),
             Container(
                 padding: EdgeInsets.all(10.0),
-                child: Text('Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH. '))
+                child: Text(
+                    'Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH.Es una prueba para las personas que quieran saber si son portadoras del VIH. '))
           ],
         ),
       );
@@ -46,7 +49,8 @@ class AutotestPage extends StatelessWidget {
         ),
       );
     }
-final submitBtn = Padding(
+
+    final submitBtn = Padding(
       padding: EdgeInsets.only(top: 20.0),
       child: Container(
         margin: EdgeInsets.only(top: 10.0, bottom: 20.0),
@@ -62,7 +66,7 @@ final submitBtn = Padding(
           elevation: 10.0,
           shadowColor: Colors.white70,
           child: MaterialButton(
-            onPressed: () => Navigator.of(context).pushNamed(riesgoViewRoute),
+            onPressed: () => Navigator.of(context).pushNamed(postAutoTest),
             child: Text(
               '¿Ya lo adquiriste?',
               style: TextStyle(
@@ -80,22 +84,23 @@ final submitBtn = Padding(
         centerTitle: true,
         title: Text(''),
       ),
-      body: Column(
-        children: <Widget>[
-          Center(
-            child: Container(
-              child: new Text('Autotest',
-                  style: new TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueGrey)),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Center(
+              child: Container(
+                child: new Text('Autotest',
+                    style: new TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueGrey)),
+              ),
             ),
-          ),
-          SizedBox(height: 30.0),
-          _cardTipo1(),
-          submitBtn,
-          
-        ],
+            SizedBox(height: 30.0),
+            _cardTipo1(),
+            submitBtn,
+          ],
+        ),
       ),
     );
   }
