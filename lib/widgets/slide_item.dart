@@ -1,7 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/models/slide.dart';
-import 'package:flare_dart/actor.dart';
 
 class SlideItem extends StatelessWidget {
   final int index;

@@ -17,7 +17,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
         children: <Widget>[
           ListTile(
             leading: Icon(Icons.info, color: secondaryColor),
-            title: Text('Actualmente tienes una ITS?', style: styleTextQuestions),
+            title: Text('Actualmente tienes una ITS?', style: styleTextTitleCards),
             subtitle: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
           ),
@@ -48,7 +48,7 @@ class _SelectOptionItsPageState extends State<SelectOptionItsPage> {
             leading: Icon(Icons.info, color: secondaryColor),
             title: Text(
               '¿Deseas saber si posees una ITS?',
-              style: styleTextQuestions,
+              style: styleTextTitleCards,
             ),
             subtitle: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
