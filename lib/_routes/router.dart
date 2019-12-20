@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/models/chat.dart';
 import 'package:kimirina_app/screens/autotest_page.dart';
 import 'package:kimirina_app/screens/chat_page.dart';
 import 'package:kimirina_app/screens/home_page.dart';
 import 'package:kimirina_app/screens/kimirinaServices_page.dart';
 import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
+import 'package:kimirina_app/screens/pinCode_page.dart';
 import 'package:kimirina_app/screens/postAutotest_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
+import 'package:kimirina_app/screens/riesgo_page.dart';
 import 'package:kimirina_app/screens/riskForm_page.dart';
-import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
 import 'package:kimirina_app/screens/its_actual_action.dart';
 import 'package:kimirina_app/screens/sigue_tratamiento.dart';
 import 'package:kimirina_app/screens/abandono_tratamineto.dart';
 import 'package:kimirina_app/screens/no_inicio_tratamiento.dart';
+import 'package:kimirina_app/widgets/chat_bubble.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -28,6 +31,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => LoginPage());
     case registerViewRoute:
       return MaterialPageRoute(builder: (context) => RegisterPage());
+    case chatPage:
+      return MaterialPageRoute(builder: (context) => ChatBubble());
     case riesgoViewRoute:
       return MaterialPageRoute(builder: (context) => RiesgoPage());
     case autotestViewRoute:
@@ -52,6 +57,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
     case noInicioTratamientoViewRoute:
       return MaterialPageRoute(builder: (context) => NoInicioTratamientoPage());
+    case pinCode:
+      return MaterialPageRoute(builder: (context) => PinCodePage());
     case chatDetailsViewRoute:
       return MaterialPageRoute(
           builder: (context) => ChatDetailsPage(userId: settings.arguments));

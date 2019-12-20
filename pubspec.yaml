@@ -27,6 +27,7 @@ dependencies:
   image_picker:
   flare_flutter:
   grouped_buttons:
+  pin_code_text_field:
 
 
 dev_dependencies:

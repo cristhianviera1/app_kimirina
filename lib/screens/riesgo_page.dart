@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kimirina_app/_routes/routes.dart';
 import 'package:kimirina_app/utils/colors.dart';
-import '../../_routes/routes.dart';
 
 class RiesgoPage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
  Widget _cardTipo1() {
@@ -14,7 +12,7 @@ class RiesgoPage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text('Autotest',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+            title: Text('Autotest',style: styleTextTitleCards),
             subtitle: Text('Es una prueba para las personas que quieran saber si son portadoras del VIH.'),
           ),
           FadeInImage(
@@ -72,7 +70,7 @@ class RiesgoPage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text('Prueba Comunitaria',style: TextStyle(fontSize: 30, color: Colors.blue)),
+            title: Text('Prueba Comunitaria',style: styleTextTitleCards),
             subtitle: Text('Es una prueba para las personas que quieran saber si son portadoras del VIH.'),
           ),
           FadeInImage(
@@ -122,7 +120,8 @@ class RiesgoPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cards'),
+        centerTitle: true,
+        title: Text('Posees un porcentaje de riesgo'),
       ),
       body: ListView(
         padding: EdgeInsets.all(10.0),

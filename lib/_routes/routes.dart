@@ -6,6 +6,9 @@ const String resetPasswordViewRoute = 'reset_password';
 
 const String homeViewRoute = 'home';
 const String chatDetailsViewRoute = 'chat_details';
+const String chatPage = 'chat_page';
+
+
 const String userDetailsViewRoute = 'user_details';
 const String selectOptionItsRoute = 'select_option_its';
 
@@ -21,3 +24,5 @@ const String serviciosKimirina = "servicios_kimirina";
 
 const String preguntaTieneITS = "tiene_its";
 const String postAutoTest = "post_auto_test";
+
+const String pinCode = 'pin_code';

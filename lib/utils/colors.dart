@@ -47,3 +47,8 @@ const styleTextQuestions = const TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.bold,
 );
+var styleTextTitleCards = TextStyle(
+  fontSize: 27,
+  fontWeight: FontWeight.bold,
+  color: primaryColor
+);
