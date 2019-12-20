@@ -135,7 +135,7 @@ final llamarBtn = Padding(
           child: MaterialButton(
             onPressed: () => Navigator.pushNamed(context, chatDetailsViewRoute, arguments:1),
             child: Text(
-              'Contantate con nosotros!',
+              'Contantate con nosotros',
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 fontSize: 20.0,
