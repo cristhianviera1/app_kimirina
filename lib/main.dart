@@ -10,4 +10,16 @@ void main(){
     systemNavigationBarColor: primaryDark
   ));
   runApp(App());
+
+  MaterialApp(
+    title: 'App Kimerina',
+    theme: ThemeData(
+      brightness: Brightness.light,
+      primarySwatch: Colors.blue,
+    ),
+    darkTheme: ThemeData(
+      brightness: Brightness.dark,
+      primarySwatch: Colors.blue,
+    ),
+  );
 }
