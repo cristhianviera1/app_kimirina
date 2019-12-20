@@ -48,26 +48,6 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-<<<<<<< HEAD
-        child: Stack(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 70.0),
-              decoration: BoxDecoration(gradient: primaryGradient),
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: <Widget>[logo, appName, buttons],
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              child: Padding(
-                padding: EdgeInsets.only(left: 10.0),
-                child: Container(
-                  height: 300.0,
-                  width: MediaQuery.of(context).size.width,
-=======
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -104,7 +84,6 @@ class _LandingPageState extends State<LandingPage> {
                       ],
                     )
                   ],
->>>>>>> cdcfb5938f2b3f22dbced8b1d989d5bf24875f7d
                 ),
               ),
               SizedBox(
