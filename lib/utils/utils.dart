@@ -62,6 +62,11 @@ class AvailableImages {
     'assetPath' : 'assets/images/woman5.jpg',
   };
 
+  static const logoIts = {
+    'assetImage' : AssetImage('assets/images/its1.jpg'),
+    'assetPath' : 'assets/images/its1.jpg',
+  };
+
   static const postBanner = {
     'assetImage' : AssetImage('assets/images/post_banner.jpg'),
     'assetPath' : 'assets/images/post_banner.jpg',
