@@ -11,18 +11,14 @@ class ItsActualActionPage extends StatelessWidget {
         padding: EdgeInsets.only(top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
         child: ExpansionTile(
           title: Text(
-            'No he seguido un tratamiento',
+            'No tenido un tratamiento',
             style: styleTextQuestions,
           ),
           children: <Widget>[
             Image.asset("assets/images/prep.jpg"),
             Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
-            FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(noInicioTratamientoViewRoute);
-              },
-            )
+            
           ],
         ),
       ),
@@ -39,11 +35,7 @@ class ItsActualActionPage extends StatelessWidget {
             Image.asset("assets/images/pruebaComunitaria.jpg"),
             Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.'),
-            FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(abandonoTratamientoViewRoute);
-              },
-            )
+            
           ],
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/screens/tabs/feeds.dart';
 import 'package:kimirina_app/utils/colors.dart';
+import 'package:kimirina_app/_routes/routes.dart';
 
 class SigueTratamientoPage extends StatelessWidget {
   @override
@@ -40,7 +41,7 @@ class SigueTratamientoPage extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/images/tratamiento.jpg'),
-                            Text("Felicidades!!!, sigue asi y cuida mucho de tu salud")
+                            Text("Felicidades!!!, sigue asi y cuida mucho de tu salud",)
                           ],
                         ),
                       ),
@@ -72,14 +73,10 @@ class SigueTratamientoPage extends StatelessWidget {
                       ),
                     ),
                     FlatButton(
-                      onPressed: () {
-                        /*...*/
-                        Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-                        return new FeedsPage();
-                      }));
-                      },
+                      color: primaryColor,
+                      onPressed: () => Navigator.pushNamed(context, chatDetailsViewRoute, arguments:1),
                       child: Text(
-                        "Contactanos",
+                        "Contactanos",style: TextStyle(color: Colors.white)
                       ),
                     )
                   ],
