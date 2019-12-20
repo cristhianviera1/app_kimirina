@@ -1,87 +1,145 @@
 import 'package:flutter/material.dart';
+import 'package:kimirina_app/utils/colors.dart';
+import '../../_routes/routes.dart';
 
 class RiesgoPage extends StatelessWidget {
-  
+
 
   @override
   Widget build(BuildContext context) {
-    final pageTitle = Padding(
-      padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
-      child: Text(
-        "Te Recomendamos...",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.orange,
-          fontSize: 30.0,
-        ),
+ Widget _cardTipo1() {
+
+     final card = Container(
+      // clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: Text('Autotest',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+            subtitle: Text('Es una prueba para las personas que quieran saber si son portadoras del VIH.'),
+          ),
+          FadeInImage(
+            image: AssetImage('assets/images/autotest.png'),
+            placeholder: AssetImage('assets/images/autotest.png'),
+            fadeInDuration: Duration( milliseconds: 200 ),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+
+    
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              FlatButton(
+                child: Text('Ver más...'),
+                 onPressed: () => Navigator.pushNamed(context, autotestViewRoute),
+              ),
+              
+            ],
+          )
+        ],
       ),
     );
 
 
-    return new Scaffold(
-      //hit Ctrl+space in intellij to know what are the options you can use in flutter widgets
-      body: new Container(
-        padding: new EdgeInsets.all(30.0),
-        child: new Center(
-          child: new Column(
-            children: <Widget>[
-              pageTitle,
-              new Card(
-                 child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            leading: CircleAvatar(
-    backgroundImage: AssetImage('assets/images/woman1.jpg'),
-  ),
-            title: Text('The Enchanted Nightingale'),
-            subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-          ),
-          ButtonBar(
-            children: <Widget>[
-              FlatButton(
-                child: const Text('BUY TICKETS'),
-                onPressed: () { /* ... */ },
-              ),
-              FlatButton(
-                child: const Text('LISTEN'),
-                onPressed: () { /* ... */ },
-              ),
-            ],
-          ),
-        ],
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.white,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
+            spreadRadius: 2.0,
+            offset: Offset(2.0, 10.0)
+          )
+        ]
       ),
-              ),
-              new Card(
-                 child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            leading: CircleAvatar(
-    backgroundImage: AssetImage('assets/images/woman1.jpg'),
-  ),
-            title: Text('The Enchanted Nightingale'),
-            subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-          ),
-          ButtonBar(
-            children: <Widget>[
-              FlatButton(
-                child: const Text('BUY TICKETS'),
-                onPressed: () { /* ... */ },
-              ),
-              FlatButton(
-                child: const Text('LISTEN'),
-                onPressed: () { /* ... */ },
-              ),
-            ],
-          ),
-        ],
-      ),
-              ),
-            ],
-          ),
-        ),
+      child: ClipRRect(
+
+        borderRadius: BorderRadius.circular(30.0),
+        child: card,
+  
+      
       ),
     );
+
+
   }
+  Widget _cardTipo2() {
+
+    final card = Container(
+      // clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: Text('Prueba Comunitaria',style: TextStyle(fontSize: 30, color: Colors.blue)),
+            subtitle: Text('Es una prueba para las personas que quieran saber si son portadoras del VIH.'),
+          ),
+          FadeInImage(
+            image: AssetImage('assets/images/comunitaria.jpg'),
+            placeholder: AssetImage('assets/images/comunitaria.jpg'),
+            fadeInDuration: Duration( milliseconds: 200 ),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+
+    
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              FlatButton(
+                child: Text('Ver más...'),
+                onPressed: () {},
+              ),
+              
+            ],
+          )
+        ],
+      ),
+    );
+
+
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.white,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
+            spreadRadius: 2.0,
+            offset: Offset(2.0, 10.0)
+          )
+        ]
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30.0),
+        child: card,
+      ),
+    );
+
+  }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Cards'),
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(10.0),
+        children: <Widget>[
+          _cardTipo1(),
+          SizedBox(height: 30.0),
+          _cardTipo2(),
+          SizedBox(height: 30.0),
+          
+        ],
+      ),
+    );
+
+
+  }
+
+  
+
+
 }

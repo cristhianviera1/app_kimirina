@@ -8,13 +8,13 @@ import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
 import 'package:kimirina_app/screens/riskForm_page.dart';
 import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
+import 'package:kimirina_app/screens/tabs/autotest_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
 import 'package:kimirina_app/screens/its_actual_action.dart';
 import 'package:kimirina_app/screens/sigue_tratamiento.dart';
 import 'package:kimirina_app/screens/abandono_tratamineto.dart';
 import 'package:kimirina_app/screens/no_inicio_tratamiento.dart';
-
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -28,6 +28,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => RegisterPage());
     case riesgoViewRoute:
       return MaterialPageRoute(builder: (context) => RiesgoPage());
+    case autotestViewRoute:
+      return MaterialPageRoute(builder: (context) => AutotestPage());
     case resetPasswordViewRoute:
       return MaterialPageRoute(builder: (context) => ResetPasswordPage());
     case selectOptionItsRoute:
@@ -45,9 +47,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case noInicioTratamientoViewRoute:
     return MaterialPageRoute(builder: (context) => NoInicioTratamientoPage());
     case chatDetailsViewRoute:
-      return MaterialPageRoute(builder: (context) => ChatDetailsPage(userId: settings.arguments));
+      return MaterialPageRoute(
+          builder: (context) => ChatDetailsPage(userId: settings.arguments));
     case userDetailsViewRoute:
-      return MaterialPageRoute(builder: (context) => UserProfilePage(userId: settings.arguments));
+      return MaterialPageRoute(
+          builder: (context) => UserProfilePage(userId: settings.arguments));
       break;
     default:
       return MaterialPageRoute(builder: (context) => LandingPage());
