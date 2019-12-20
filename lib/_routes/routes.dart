@@ -8,3 +8,4 @@ const String homeViewRoute = 'home';
 const String chatDetailsViewRoute = 'chat_details';
 const String userDetailsViewRoute = 'user_details';
 const String selectOptionItsRoute = 'select_option_its';
+const String itsActualActionViewRoute = 'its_actual_action';

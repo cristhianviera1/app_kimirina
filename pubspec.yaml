@@ -64,6 +64,9 @@ flutter:
    - assets/images/atencion-primaria.jpg
    - assets/animations/Logo.flr
    - assets/animations/handShake.flr
+   - assets/images/cruz_roja.jpg
+   - assets/images/No_inicia.jpg
+   - assets/images/XRoja.jpg
 
    
 

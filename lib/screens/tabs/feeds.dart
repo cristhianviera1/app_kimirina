@@ -51,6 +51,7 @@ class FeedsPage extends StatelessWidget {
                       feed: feeds[2],
                     ),
                     FlatButton(
+                      color: Colors.blue,
                       onPressed: () {
                         /*...*/
                         Navigator.of(context)
