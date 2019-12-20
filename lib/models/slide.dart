@@ -16,14 +16,14 @@ class Slide {
 
 final slideList = [
   Slide(
-    imageUrl: 'assets/animations/Lock_Animation.flr',
+    imageUrl: 'assets/animations/Logo.flr',
     animationName: 'Untitled',
     title: 'Kimirina',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
   ),
   Slide(
-    imageUrl: 'assets/animations/Lock_Animation.flr',
-    animationName: 'Confianza',
+    imageUrl: 'assets/animations/handShake.flr',
+    animationName: 'Untitled',
     title: 'Confianza',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus tincidunt bibendum. Maecenas eu viverra orci. Duis diam leo, porta at justo vitae, euismod aliquam nulla.',
   ),

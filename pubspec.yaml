@@ -60,6 +60,8 @@ flutter:
    - assets/images/empty.png
    - assets/images/post_banner.jpg
    - assets/animations/Lock_Animation.flr
+   - assets/animations/Logo.flr
+   - assets/animations/handShake.flr
 
    
 

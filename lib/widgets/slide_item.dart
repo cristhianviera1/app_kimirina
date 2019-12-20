@@ -10,12 +10,12 @@ class SlideItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 200,
-          height: 200,
+          width: 300,
+          height: 300,
           child: 
           FlareActor(slideList[index].imageUrl,animation: slideList[index].animationName)
         ),
@@ -25,7 +25,9 @@ class SlideItem extends StatelessWidget {
         Text(
           slideList[index].title,
           style: TextStyle(
-            fontSize: 22,
+            fontSize: 27,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
             color: Theme.of(context).primaryColor,
           ),
         ),
@@ -35,6 +37,9 @@ class SlideItem extends StatelessWidget {
         Text(
           slideList[index].description,
           textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22,
+          ),
         ),
       ],
     );
