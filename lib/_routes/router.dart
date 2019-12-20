@@ -5,6 +5,7 @@ import 'package:kimirina_app/screens/home_page.dart';
 import 'package:kimirina_app/screens/kimirinaServices_page.dart';
 import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
+import 'package:kimirina_app/screens/pruebaComunitaria_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
 import 'package:kimirina_app/screens/riskForm_page.dart';
@@ -31,6 +32,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => RiesgoPage());
     case autotestViewRoute:
       return MaterialPageRoute(builder: (context) => AutotestPage());
+      case autotestViewRoute:
+      return MaterialPageRoute(builder: (context) => PruebaComunitariaPage());
     case resetPasswordViewRoute:
       return MaterialPageRoute(builder: (context) => ResetPasswordPage());
     case selectOptionItsRoute:

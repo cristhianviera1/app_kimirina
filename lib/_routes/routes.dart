@@ -21,3 +21,4 @@ const String serviciosKimirina = "servicios_kimirina";
 
 const String preguntaTieneITS = "tiene_its";
 
+const String pruebaComunitariaViewRoute = "prueba_comunitaria";

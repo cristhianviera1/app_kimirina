@@ -89,7 +89,7 @@ class RiesgoPage extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 child: Text('Ver más...'),
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, pruebaComunitariaViewRoute),
               ),
               
             ],
