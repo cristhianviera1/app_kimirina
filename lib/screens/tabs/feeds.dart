@@ -5,6 +5,8 @@ import 'package:kimirina_app/widgets/feed_card2.dart';
 import 'package:kimirina_app/widgets/feed_card3.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
 
+import '../../_routes/routes.dart';
+
 
 class FeedsPage extends StatelessWidget {
   @override
@@ -61,6 +63,11 @@ class FeedsPage extends StatelessWidget {
                       },
                       child: Text(
                         "Flat Button",
+                      ),
+                    ), FlatButton(
+                      onPressed: () => Navigator.pushNamed(context, riesgoViewRoute),
+                      child: Text(
+                        "Riesgo",
                       ),
                     )
                   ],
