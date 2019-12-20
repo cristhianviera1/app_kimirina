@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
+import 'package:kimirina_app/screens/abandono_tratamineto.dart';
+import 'package:kimirina_app/screens/sigue_tratamiento.dart';
 
-import 'its_actual_action.dart';
-
-class SelectOptionItsPage extends StatelessWidget {
+class ItsActualActionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
 
-
-    final userImage = Positioned(
+    final pageTitle = Padding(
+      padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
+      child: Text(
+        "¿Que haces? ",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+          fontSize: 35.0,
+        ),
+      ),
+    );
+    
+    final image1 = Positioned(
       left: 0,
       top: 15.0,
       child: InkWell(
         onTap: () => Navigator.pushNamed(null, homeViewRoute),
         child: Hero(
-          tag: AssetImage('assets/images/its1.jpg'),
+          tag: AssetImage('assets/images/cruz_roja.jpg'),
           child: Material(
             elevation: 5.0,
             borderRadius: BorderRadius.circular(14.0),
@@ -24,7 +35,7 @@ class SelectOptionItsPage extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(14.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/its1.jpg'),
+                  image: AssetImage('assets/images/cruz_roja.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -34,8 +45,60 @@ class SelectOptionItsPage extends StatelessWidget {
       ),
     );
 
-    final userName = Text(
-      'Has contraido VIH o alguna infexion sexual',
+    final image2 = Positioned(
+      right: 0,
+      top: 15.0,
+      child: InkWell(
+        onTap: () => Navigator.pushNamed(null, homeViewRoute),
+        child: Hero(
+          tag: AssetImage('assets/images/XRoja.jpg'),
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(14.0),
+            child: Container(
+              height: 120.0,
+              width: 120.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/XRoja.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    final image3 = Positioned(
+      left: 0,
+      top: 15.0,
+      child: InkWell(
+        onTap: () => Navigator.pushNamed(null, homeViewRoute),
+        child: Hero(
+          tag: AssetImage('assets/images/No_inicia.jpg'),
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(14.0),
+            child: Container(
+              height: 120.0,
+              width: 120.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/No_inicia.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    final text1 = Text(
+      'Estoy siguiendo un tratamiento',
       style: TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.bold,
@@ -43,10 +106,28 @@ class SelectOptionItsPage extends StatelessWidget {
       ),
     );
 
-    final cardContent = Column(
+    final text2 = Text(
+      'Abandone el tratamiento',
+      style: TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+      ),
+    );
+
+    final text3 = Text(
+      'No he iniciado untratamiento',
+      style: TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+      ),
+    );
+
+    final cardContent1 = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        userName,
+        text1,
         SizedBox(
           height: 5.0,
         ),
@@ -55,80 +136,50 @@ class SelectOptionItsPage extends StatelessWidget {
         onPressed: (){ 
           Navigator.of(context)
           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-          return new ItsActualActionPage();
+          return new SigueTratamientoPage();
         }));
         },
-        child: Text("Si lo tengo"), 
+        child: Text("Que tal te va??"), 
         )
       ],
-    );
-
-
-    final pageTitle = Padding(
-      padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
-      child: Text(
-        "Selecciona una opción: ",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-          fontSize: 35.0,
-        ),
-      ),
-    );
-
-
-    final userImage2 = Positioned(
-      right: 0,
-      top: 15.0,
-      child: InkWell(
-        onTap: () => Navigator.pushNamed(null, homeViewRoute),
-        child: Hero(
-          tag: AssetImage('assets/images/atencion-primaria.jpg'),
-          child: Material(
-            elevation: 5.0,
-            borderRadius: BorderRadius.circular(14.0),
-            child: Container(
-              height: 120.0,
-              width: 120.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14.0),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/atencion-primaria.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-
-    final userName2 = Text(
-      'No deseo saber si padesco??',
-      style: TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-        fontSize: 16.0,
-      ),
     );
 
     final cardContent2 = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        userName2,
+        text3,
         SizedBox(
           height: 5.0,
         ),
         RaisedButton(
         color: Colors.orange,
         onPressed: (){ 
-          
+          Navigator.of(context)
+          .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+          return new AbandonoTratamientoPage();
+        }));
         },
-        child: Text("Realizar test"), 
+        child: Text("Cuentanos la razon??"), 
         )
       ],
     );
-    
+
+    final cardContent3 = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        text1,
+        SizedBox(
+          height: 5.0,
+        ),
+        RaisedButton(
+        color: Colors.orange,
+        onPressed: (){ 
+
+        },
+        child: Text("Por que??"), 
+        )
+      ],
+    );
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -164,17 +215,17 @@ class SelectOptionItsPage extends StatelessWidget {
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(14.0),
                                     ),
-                                    child: cardContent,
+                                    child: cardContent1,
                                   ),
                                 ),
                               ),
-                              userImage
+                              image1
                             ],
                           ),
                     ),
                     //-------------------------------------------------------------------
                     SizedBox(
-                      height: 20.0,
+                      height: 10.0,
                     ),
                     //-------------------------------------------------------------------
                     Container(
@@ -199,13 +250,40 @@ class SelectOptionItsPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          userImage2
+                          image2
                         ],
                       ),
                     ),
                     //......................................................................
                     SizedBox(
-                      height: 60.0,
+                      height: 10.0,
+                    ),
+                    //-----------------------------------------------------------------------
+                     Container(
+                       height: 150.0,
+                          width: MediaQuery.of(context).size.width,
+                          child: Stack(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(left: 40.0),
+                                child: Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                  child: Container(
+                                    padding: EdgeInsets.only(top: 20.0, left: 100.0),
+                                    height: 150.0,
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(14.0),
+                                    ),
+                                    child: cardContent3,
+                                  ),
+                                ),
+                              ),
+                              image3
+                            ],
+                          ),
                     ),
                     //-----------------------------------------------------------------------
                   ],
@@ -216,6 +294,8 @@ class SelectOptionItsPage extends StatelessWidget {
         ),
       ),
     );
+
+
 
   }
 }
