@@ -59,15 +59,12 @@ flutter:
    - assets/images/logo.png
    - assets/images/empty.png
    - assets/images/post_banner.jpg
-<<<<<<< HEAD
    - assets/images/its1.jpg
-=======
    - assets/animations/Lock_Animation.flr
    - assets/animations/Logo.flr
    - assets/animations/handShake.flr
 
    
->>>>>>> cdcfb5938f2b3f22dbced8b1d989d5bf24875f7d
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
