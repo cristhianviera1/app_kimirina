@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   line_icons: ^0.2.0
   image_picker:
+  flare_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,9 @@ flutter:
    - assets/images/logo.png
    - assets/images/empty.png
    - assets/images/post_banner.jpg
+   - assets/animations/Lock_Animation.flr
+
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
