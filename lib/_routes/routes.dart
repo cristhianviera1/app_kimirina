@@ -14,4 +14,6 @@ const String itsActualActionViewRoute = 'its_actual_action';
 const String siguiendoTratamientoViewRoute = 'sigue_tratamiento';
 const String abandonoTratamientoViewRoute = 'abandona_tratamiento';
 
+const String preguntaTieneITS = "tiene_its";
+
 const String riesgoViewRoute = 'riesgo';

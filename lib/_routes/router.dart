@@ -37,6 +37,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => ItsActualActionPage());
     case siguiendoTratamientoViewRoute:
     return MaterialPageRoute(builder: (context) => SigueTratamientoPage());
+    case preguntaTieneITS:
+      return MaterialPageRoute(builder: (context) => SelectOptionItsPage());
     case abandonoTratamientoViewRoute:
     return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
     case chatDetailsViewRoute:

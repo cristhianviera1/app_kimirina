@@ -121,9 +121,9 @@ class SelectOptionItsPage extends StatelessWidget {
         ),
         RaisedButton(
         color: Colors.orange,
-        onPressed: (){ 
-          
-        },
+        onPressed: 
+          () => Navigator.of(context).pushNamed(riskFormRoute)          
+        ,
         child: Text("Realizar test"), 
         )
       ],
