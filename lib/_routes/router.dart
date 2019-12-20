@@ -6,10 +6,15 @@ import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
+import 'package:kimirina_app/screens/riskForm_page.dart';
 import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
 import 'package:kimirina_app/screens/tabs/autotest_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
 import 'package:kimirina_app/screens/select_option_its_page.dart';
+import 'package:kimirina_app/screens/its_actual_action.dart';
+import 'package:kimirina_app/screens/sigue_tratamiento.dart';
+import 'package:kimirina_app/screens/abandono_tratamineto.dart';
+import 'package:kimirina_app/screens/no_inicio_tratamiento.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -29,6 +34,18 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => ResetPasswordPage());
     case selectOptionItsRoute:
       return MaterialPageRoute(builder: (context) => SelectOptionItsPage());
+    case riskFormRoute:
+      return MaterialPageRoute(builder: (context) => RiskFormPage());
+    case itsActualActionViewRoute:
+      return MaterialPageRoute(builder: (context) => ItsActualActionPage());
+    case siguiendoTratamientoViewRoute:
+    return MaterialPageRoute(builder: (context) => SigueTratamientoPage());
+    case preguntaTieneITS:
+      return MaterialPageRoute(builder: (context) => SelectOptionItsPage());
+    case abandonoTratamientoViewRoute:
+    return MaterialPageRoute(builder: (context) => AbandonoTratamientoPage());
+    case noInicioTratamientoViewRoute:
+    return MaterialPageRoute(builder: (context) => NoInicioTratamientoPage());
     case chatDetailsViewRoute:
       return MaterialPageRoute(
           builder: (context) => ChatDetailsPage(userId: settings.arguments));

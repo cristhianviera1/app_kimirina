@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:kimirina_app/models/feed.dart';
-import 'package:kimirina_app/widgets/feed_card1.dart';
-import 'package:kimirina_app/widgets/feed_card2.dart';
-import 'package:kimirina_app/widgets/feed_card3.dart';
-import 'package:kimirina_app/screens/select_option_its_page.dart';
+import 'package:kimirina_app/screens/tabs/feeds.dart';
 
-import '../../_routes/routes.dart';
-
-
-class FeedsPage extends StatelessWidget {
+class AbandonoTratamientoPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
 
     final pageTitle = Padding(
       padding: EdgeInsets.only(top: 1.0, bottom: 30.0),
       child: Text(
-        "Feed",
+        "Abandone un tratamiento ",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.black,
-          fontSize: 40.0,
+          fontSize: 35.0,
         ),
       ),
     );
+
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -39,42 +33,55 @@ class FeedsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     pageTitle,
-                    FeedCard1(feed: feeds[0]),
+                     Card(
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/images/abandono.jpg'),
+                            Text("Deberias reanudar tu tratamiento")
+                          ],
+                        ),
+                      ),
+                     ),
                     SizedBox(
                       height: 10.0,
                     ),
-                    FeedCard2(
-                      feed: feeds[1],
-                    ),
+                    Text('Recomendaciones:', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 15.0,
+                        ),
+                      ),
                     SizedBox(
                       height: 10.0,
                     ),
-                    FeedCard3(
-                      feed: feeds[2],
-                    ),
+                    Text('No olvides que el seguir con tu tratamiento previene el deterioro de tu salud'),  
                     FlatButton(
-                      color: Colors.blue,
+                      color: Colors.orange,
                       onPressed: () {
                         /*...*/
                         Navigator.of(context)
                         .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-                        return new SelectOptionItsPage();
+                        return new FeedsPage();
                       }));
                       },
                       child: Text(
-                        "Flat Button",
-                      ),
-                    ), FlatButton(
-                      onPressed: () => Navigator.pushNamed(context, riesgoViewRoute),
-                      child: Text(
-                        "Riesgo",
-                      ),
-                    ), FlatButton(
-                      onPressed: () => Navigator.pushNamed(context, autotestViewRoute),
-                      child: Text(
-                        "autotest",
+                        "Finalizar",
                       ),
                     ),
+                    FlatButton(
+                      color: Colors.yellow,
+                      onPressed: () {
+                        /*...*/
+                        Navigator.of(context)
+                        .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                        return new FeedsPage();
+                      }));
+                      },
+                      child: Text(
+                        "Deseas hablar con un brigadista?",
+                      ),
+                    )
                   ],
                 ),
               )
@@ -83,5 +90,6 @@ class FeedsPage extends StatelessWidget {
         ),
       ),
     );
+  
   }
 }

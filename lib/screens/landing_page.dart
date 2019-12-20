@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:kimirina_app/_routes/routes.dart';
 import 'package:kimirina_app/models/slide.dart';

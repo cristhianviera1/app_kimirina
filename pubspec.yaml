@@ -26,6 +26,7 @@ dependencies:
   line_icons: ^0.2.0
   image_picker:
   flare_flutter:
+  grouped_buttons:
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,12 @@ flutter:
    - assets/images/atencion-primaria.jpg
    - assets/animations/Logo.flr
    - assets/animations/handShake.flr
+   - assets/images/cruz_roja.jpg
+   - assets/images/No_inicia.jpg
+   - assets/images/XRoja.jpg
+   - assets/images/tratamiento.jpg
+   - assets/images/abandono.jpg
+   - assets/images/VIH.jpg
 
 
 
