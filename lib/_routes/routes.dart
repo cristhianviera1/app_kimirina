@@ -7,3 +7,6 @@ const String resetPasswordViewRoute = 'reset_password';
 const String homeViewRoute = 'home';
 const String chatDetailsViewRoute = 'chat_details';
 const String userDetailsViewRoute = 'user_details';
+
+const String riesgoViewRoute = 'riesgo';
+

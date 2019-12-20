@@ -6,7 +6,9 @@ import 'package:kimirina_app/screens/landing_page.dart';
 import 'package:kimirina_app/screens/login_page.dart';
 import 'package:kimirina_app/screens/register_page.dart';
 import 'package:kimirina_app/screens/resetPassword_page.dart';
+import 'package:kimirina_app/screens/tabs/riesgo_page.dart';
 import 'package:kimirina_app/screens/user_profile.dart';
+
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -18,6 +20,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => LoginPage());
     case registerViewRoute:
       return MaterialPageRoute(builder: (context) => RegisterPage());
+    case riesgoViewRoute:
+      return MaterialPageRoute(builder: (context) => RiesgoPage());
     case resetPasswordViewRoute:
       return MaterialPageRoute(builder: (context) => ResetPasswordPage());
     case chatDetailsViewRoute:
