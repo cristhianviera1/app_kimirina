@@ -35,22 +35,6 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
-          FloatingActionButton(
-            child: Text("Omitir"),
-            backgroundColor: primaryColor,
-            onPressed: (){
-              Navigator.of(context).pushNamed(autotestViewRoute);
-            },
-          ),
-          FloatingActionButton(
-            child: Text("Chat"),
-            backgroundColor: primaryColor,
-            onPressed: (){
-              Navigator.of(context).pushNamed(chatPage);
-            },
-          )
-        ],
       ),
       body: Container(
         color: Colors.white,
