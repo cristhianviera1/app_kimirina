@@ -26,6 +26,7 @@ dependencies:
   line_icons: ^0.2.0
   image_picker:
   flare_flutter:
+  grouped_buttons:
 
 dev_dependencies:
   flutter_test:

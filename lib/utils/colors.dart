@@ -3,7 +3,7 @@ import 'dart:ui';
 
 const primaryColor = const Color(0xFFfbab66);
 const primaryLight = const Color(0xFFFF9F59);
-const primaryDark = const Color(0xFFFF9F59);
+const primaryDark = const Color(0xFFfbab66);
 
 const secondaryColor = const Color(0xFFFF9F59);
 const secondaryLight = const Color(0xFFFF9F59);
@@ -29,4 +29,9 @@ const chatBubbleGradient2 = const LinearGradient(
   colors: const [Color(0xFFf4e3e3), Color(0xFFf4e3e3)],
   begin: Alignment.topRight,
   end: Alignment.bottomLeft,
+);
+
+const styleTextQuestions = const TextStyle(
+  fontSize: 22,
+  fontWeight: FontWeight.bold,
 );
