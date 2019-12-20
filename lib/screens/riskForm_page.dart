@@ -101,7 +101,7 @@ class _RiskFormPageState extends State<RiskFormPage> {
           elevation: 10.0,
           shadowColor: Colors.white70,
           child: MaterialButton(
-            onPressed: () => Navigator.of(context).pushNamed(homeViewRoute),
+            onPressed: () => Navigator.of(context).pushNamed(riesgoViewRoute),
             child: Text(
               'Continuar',
               style: TextStyle(

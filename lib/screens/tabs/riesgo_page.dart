@@ -19,7 +19,7 @@ class RiesgoPage extends StatelessWidget {
           ),
           FadeInImage(
             image: AssetImage('assets/images/autotest.png'),
-            placeholder: AssetImage('assets/images/autotest.png'),
+            placeholder: AssetImage('assets/animations/logo.gif'),
             fadeInDuration: Duration( milliseconds: 200 ),
             height: 300.0,
             fit: BoxFit.cover,
@@ -77,7 +77,7 @@ class RiesgoPage extends StatelessWidget {
           ),
           FadeInImage(
             image: AssetImage('assets/images/comunitaria.jpg'),
-            placeholder: AssetImage('assets/images/comunitaria.jpg'),
+            placeholder: AssetImage('assets/animations/logo.gif'),
             fadeInDuration: Duration( milliseconds: 200 ),
             height: 300.0,
             fit: BoxFit.cover,
